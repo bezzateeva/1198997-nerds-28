@@ -73,7 +73,6 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   color: var(--basic-black);
   background-color: var(--basic-grey);
-  margin-bottom: 9px;
 }
 
 .user-navigation {
@@ -86,30 +85,33 @@ max-width: 140px;
 
 .sliders {
   background-color: var(--basic-grey);
-  display: flex;
-  justify-content: space-between;
   margin: 0;
 }
 
+.slider-list {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-left-text {
+  width: 400px;
+  height: 431px;
+  justify-content: center;
+}
+
+.slider-item {
+  display: none;
+
+}
+
+.slider-item.active {
+  display: block;
+}
+
 .button-slider {
-padding-bottom: 15px;
-padding-top: 17px;
-padding-left: 54px;
-padding-right: 54px;
-display: inline-block;
-text-align: center;
-align-items: center;
-color: var(--basic-extra-white);
-text-transform: uppercase;
-vertical-align: middle;
-background-color: var(--basic-red);
-border-radius: 3px;
-font-family: Roboto;
-font-size: 16px;
-line-height: 18px;
-font-weight: 500;
 width: 240px;
 height: 50px;
+margin-top: 6px;
 }
 
 .button-slider:hover,
@@ -120,6 +122,7 @@ height: 50px;
 .button-slider:active {
   background: #D7373B;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  color: rgba(255,255,255,0.3);
 }
 
 .slider-text {
@@ -127,12 +130,9 @@ height: 50px;
   font-size: 55px;
   line-height: 55px;
   width: 400px;
-  margin: 0;
-}
+  margin top: 83px;
+  margin-bottom: 25px;
 
-.slider-texts{
-  width: 760px;
-  height: 400px;
 }
 
 .page-title {
@@ -159,14 +159,12 @@ height: 50px;
 .container {
   width: 1160px;
   margin: 0 auto;
-  padding: 0 21px;
+  padding: 0;
 }
 
-.container-features{
-  width: 1100px;
-  margin-left: 140px;
-  margin-right: 200px;
-  padding: 0 21px;
+.container.sliders {
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header-logo {
@@ -219,9 +217,9 @@ margin-top: 80px
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
+  grid-column-gap: 100px;
   padding: 0;
-  margin: 0;
+  margin-right: 58px;
 }
 
 .feature-item {
@@ -277,9 +275,6 @@ margin-top: 80px
   line-height: 18px;
   font-weight: 500;
   width: 160px;
-  height: 50px;
-  min-width: 160px;
-  max-width: 260px;
 }
 
 .button:hover,
@@ -291,7 +286,7 @@ margin-top: 80px
   background-color: #D7373B;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   mix-blend-mode: normal;
-  color: #FFFFFF;
+  color: rgba(255,255,255,0.3);
 }
 
 .button.disabled,
@@ -304,10 +299,10 @@ margin-top: 80px
   width: 260px;
   height: 50px;
   margin-top: 47px;
-  margin-bottom: 84px;  
+  margin-bottom: 84px;
 }
 
-.button-contacts .button {
+.button-contacts.button {
   width: 219px;
   height: 50px;
   margin-top: 37px;
@@ -329,7 +324,6 @@ margin-top: 80px
   background-color: #00AA62;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
   mix-blend-mode: normal;
-  opacity: 0.3;
 }
 
 .button-yellow.button {
@@ -344,8 +338,6 @@ margin-top: 80px
 .button-yellow.button:active {
   background: #E5A722;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
-
-  opacity: 0.3;
 }
 
 .button-close {
@@ -386,6 +378,9 @@ margin-top: 80px
   align-items: center;
 }
 
+.footer-text2 {
+  margin-bottom: 74px;
+}
 
 .social-button {
   color: inherit;
@@ -399,6 +394,7 @@ margin-top: 80px
   justify-content: center;
   align-items: center;
   margin-right: 9px;
+  margin-bottom: 68px;
 }
 
 .social-button:hover,
@@ -471,14 +467,34 @@ margin-top: 80px
   color: #283136;
 }
 
+.modal {
+  border: 1px solid black;
+  width: 960px;
+  height: 590px;
+  margin-left: 240px;
+  padding-left: 100px;
+}
+
 .modal-name {
   font-weight: bold;
   font-size: 45px;
   line-height: 53px;
+
 }
 
 .modal-text {
   font-weight: bold;
+}
+
+.login-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 761px;
+  height: 353px;
+}
+
+.form-name {
+
 }
 
 .text-user {
@@ -584,6 +600,17 @@ margin-top: 80px
   font-weight: bold;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.contacts-text {
+  border: 1px solid black;
+  width: 319px;
+  height: 308px;
+  padding-top: 49px;
+  padding-left: 50px;
+  margin-left: 140px;
+
+
 }
 
 .contact-address {
