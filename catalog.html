@@ -26,11 +26,40 @@
         </nav>
       </div>
     </header>
-    <main class="page-catalog container">
-      <h1 class="page-title">Магазин готовых шаблонов</h1>
+    <main class="page-catalog">
+      <div class="page-caption">
+        <h1 class="page-title">Магазин готовых шаблонов</h1>
+      </div>
       <section class="filters">
         <h2 class="visually-hidden">Фильтр шаблонов</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filter-item">
+            <legend>Стоимость:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="
+                    width: 30%;
+                    margin-left: 20%
+                  "></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="
+                  left: 20%
+                "></div>
+                <div class="toggle toggle-max" tabindex="0" style="
+                  left: 50%
+                "></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  от <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="number" name="max-price" value="15000">
+                </label>
+              </div>
+            </div>
+          </fieldset>
           <fieldset class="filter-group1">
             <legend class="sorting-name">Сетка:</legend>
             <ul>
@@ -73,7 +102,7 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-button">Показать</button>
+          <button type="submit" class="filter-button button">Показать</button>
         </form>
       </section>
       <section class="sorting">
@@ -82,6 +111,12 @@
           <li class="sorting-item-active"><a href="#">По цене</a></li>
           <li class="sorting-item"><a href="#">По типу</a></li>
           <li class="sorting-item"><a href="#">По названию</a></li>
+        </ul>
+      </section>
+      <section class="sorting-mini">
+        <ul class="sorting-mini-list">
+          <li class="sorting-mini-item-active">вверх</li>
+          <li class="sorting-mini-item">вниз</li>
         </ul>
       </section>
       <section class="catalog">
